@@ -1,0 +1,17 @@
+
+if content.lower().startswith(tuple(bannedlinks)) and chatName == firstname + " (ЛС)": content = "[Заблокированная ссылка]" ## Бан ссылок.
+
+#time.sleep(1); print(Fore.WHITE+ " ⁞ Это начало истории с чатов и групп, что бы очистить историю - используйте команду - /cls\n")
+
+    #if message.content_type != 'photo' and 'voice': ## Если юзеры отправили данный тип сообщений - то терминал молчит
+        #print(Fore.CYAN + "[", current_time, "]",Fore.WHITE + "[", chatId, "]", Fore.WHITE + content, "[ Название чата:", chatName, "]")
+    #else: pass ## Пропускаем какие-либо действия в терминале, поскольку пользователь решил отправить голосовое сообщение или изображение
+
+
+        elif sayori1.lower().startswith("оформи текст"): ## Команда, позволяющая пользователю в легкую сделать оформления текста без выделения
+            raw_text = message.text[22:]; b_font = raw_text
+            formatting_rules = {"*": "<b>", "**": "</b>"}
+            for key, value in formatting_rules.items():
+                b_font = b_font.replace(key, value)
+            print(b_font)
+            #bot.send_chat_action(chatId, "typing"); time.sleep(3); bot.send_message(chatId, b_font, parse_mode="html")
